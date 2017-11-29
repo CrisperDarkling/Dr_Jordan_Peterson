@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+   
+{% block content %}
+   <h1>Create an account and give us all your money!</h1>
+   
+   <form method="POST">
+       
+       {% csrf_token %}
+       
+       {{ user_form | as_bootstrap }}
+       
+       <button type="submit">Register</button>
+   </form>
+{% endblock %}
