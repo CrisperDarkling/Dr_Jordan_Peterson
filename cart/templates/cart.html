@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in cart_items %}
+            <tr>
+                <td><img height="100" width="100" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.product.description }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.product.price }}</td>
+                <td>
+                    <form method="post" action="{% url 'adjust_cart' item.id %}">
+                        {% csrf_token %}
+                        Quantity
+                        <input name='quantity' type="number" min="0" max="999">
+                        <button type="submit">Adjust</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>{{ total }}</td>
+            <td><a href="#" class="btn btn-success" role="button">Checkout</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
