@@ -7,7 +7,7 @@
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
         
         <div class="panel=body">
-            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ product_image }}')"></div>
+            <img class="product" src="{{ MEDIA_URL }}{{ product.image }}"/>
         
             <h3> {{ product.name }}</h3>
             <p class="product-description"> {{ product.description }} </p>
