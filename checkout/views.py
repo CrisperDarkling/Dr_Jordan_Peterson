@@ -4,8 +4,8 @@ from django.contrib import messages
 from .forms import MakePaymentForm, OrderForm
 from .models import OrderLineItem
 from django.conf import settings
-from django.utilis import timezone
-form products.models import Products
+from django.utils import timezone
+from products.models import Products
 import stripe
 # Create your views here.
 
