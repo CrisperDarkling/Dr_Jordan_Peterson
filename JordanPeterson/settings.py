@@ -138,7 +138,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 STATICFILES_DIRS = (
    os.path.join(BASE_DIR, "static"),
-)
+    )
 STATIC_URL = '/static/'
 STATICFILES_LOCATION = 'static'
 # STATICFILES_STORAGE = 'custom_storages.StaticStorage'
