@@ -1,1 +1,7 @@
 env.py
+__pycache__
+.~c9*
+env.py
+*.png
+static/
+media/
