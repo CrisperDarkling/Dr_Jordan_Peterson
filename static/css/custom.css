@@ -3,6 +3,20 @@ body {
     padding-top: 100px;
 }
 
+a,
+h4 {
+    text-align: center;
+    color: black;
+}
+
+
+.searchbox {
+    display:inline-block;
+    position:relative;
+    padding: 1.5px;
+}
+
+
 footer {
     margin-top: 40px;
     padding-top: 20px;
