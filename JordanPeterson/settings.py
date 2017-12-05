@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "home",
     "accounts",
     "blog",
+    "blogcategories",
     "cart",
     "checkout",
     'categories',

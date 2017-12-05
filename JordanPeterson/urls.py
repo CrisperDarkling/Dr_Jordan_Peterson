@@ -19,6 +19,7 @@ from django.views import static
 from .settings import MEDIA_ROOT
 from accounts import urls as accounts_urls
 from blog import urls as blog_urls
+from blogcategories import urls as blogcategories_urls
 from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 from home.views import get_index
@@ -36,6 +37,7 @@ urlpatterns = [
     url(r'^$', get_index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^blog/', include(blog_urls)),
+    url(r'^blogcategories/', include(blogcategories_urls)),
     url(r'^cart/', include(cart_urls)),
     url(r'^categories/', include(categories_urls)),
     url(r'^checkout/', include(checkout_urls)),
