@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-2 col-sm-3 text-center">
+            <a class="story-img" href="#">
+                <img src="{{ MEDIA_URL }}{{ post.author.profile.image }}"
+                     style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+            </a>
+        </div>
+        <div class="col-md-10 col-sm-9">
+            <h3>{{ post.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+                    {% if post.image %}
+                        <img src="{{MEDIA_URL}}{{post.image}}" height=500px>
+                    {% endif %}
+                    <p>{{ post.content }}</p>
+                    <button class="btn btn-default" onclick="location.href='{% url 'posts' %}'">Back To Blog</button>
+                    <button class="btn btn-default" onclick="location.href='{% url 'editpost' post.id %}'">Edit</button>
+                    <p>{{ post.published_date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

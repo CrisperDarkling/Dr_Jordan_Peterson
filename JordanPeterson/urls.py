@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.views import static
 from .settings import MEDIA_ROOT
 from accounts import urls as accounts_urls
+from blog import urls as blog_urls
 from cart import urls as cart_urls
 from checkout import urls as checkout_urls
 from home.views import get_index
@@ -34,10 +35,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name="index"),
     url(r'^accounts/', include(accounts_urls)),
-    url(r'^products/', include(products_urls)),
+    url(r'^blog/', include(blog_urls)),
     url(r'^cart/', include(cart_urls)),
-    url(r'^checkout/', include(checkout_urls)),
-    url(r'^search/', include(search_urls)),
     url(r'^categories/', include(categories_urls)),
+    url(r'^checkout/', include(checkout_urls)),
+    url(r'^products/', include(products_urls)),
+    url(r'^search/', include(search_urls)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]
