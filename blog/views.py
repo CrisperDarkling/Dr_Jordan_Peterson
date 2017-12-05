@@ -57,7 +57,7 @@ def addcomment(request, post_id):
         
 def youtube_by_category(request, id):
     youtubeposts = Post.objects.filter(youtubecategory=id)
-    return render(request, "blogposts.html", {"blogposts": youtubeposts})
+    return render(request, "youtubecategories.html", {"youtubecategories": youtubeposts})
     
     
 
