@@ -2,13 +2,13 @@
 
 {% block content %}
 {% for category in categories %}
-
-    <a href="{% url 'products_by_category' category.id %}">
-        <div class="col-md-3 cats" style="background-image: url({{ MEDIA_URL }}{{ category.image }});">
-            <h1>{{ category.name }}</h1>
-        </div>
-    </a>
-   
+    <div class="row">
+        <a href="{% url 'products_by_category' category.id %}">
+            <div class="col-md-3 cats" style="background-image: url({{ MEDIA_URL }}{{ category.image }});">
+                <h1>{{ category.name }}</h1>
+            </div>
+        </a>
+    </div>
 {% endfor %}
 
 {% endblock %}
