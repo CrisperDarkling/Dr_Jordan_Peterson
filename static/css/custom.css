@@ -3,6 +3,10 @@ body {
     padding-top: 100px;
 }
 
+
+
+
+
 a,
 h4 {
     text-align: center;
@@ -17,12 +21,13 @@ h4 {
 }
 
 
-footer {
+.footer {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid #ededed;
     color: #A9A9A9;
+    text-align: center;
 }
 
 .icon-bar {

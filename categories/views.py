@@ -5,5 +5,3 @@ from .models import Category
 def all_categories(request):
     categories = Category.objects.all()
     return render(request, "categories.html", {"categories": categories})
-    
-    
