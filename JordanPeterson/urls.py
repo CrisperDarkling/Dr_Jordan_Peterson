@@ -28,6 +28,7 @@ from products import urls as products_urls
 from products.views import all_products
 from search import urls as search_urls
 from categories import urls as categories_urls
+from purchased import urls as purchased_urls
 
 
 
@@ -44,6 +45,7 @@ urlpatterns = [
     url(r'^checkout/', include(checkout_urls)),
     url(r'^contact/', contact, name='contact'),
     url(r'^products/', include(products_urls)),
+    url(r'^purchased/', include(purchased_urls)),
     url(r'^search/', include(search_urls)),
     url(r'^media/(?P<path>.*)$', static.serve,{'document_root': MEDIA_ROOT}),
 ]

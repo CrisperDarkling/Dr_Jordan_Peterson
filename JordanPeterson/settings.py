@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'categories',
     "contact",
     "products",
+    "purchased",
     "search",
 ]
 

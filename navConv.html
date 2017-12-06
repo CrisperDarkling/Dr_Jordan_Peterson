@@ -72,9 +72,9 @@
                 
                 <div class="nav navbar-nav">
                     <ul class="menubuttons">
-                        <li><a href="{% url 'products' %}" class="color_black hvr-bounce-in green-hover">Browse All</a></li> 
-                        <li><a href="{% url 'categories' %}" role="button" aria-haspopup="true" aria-expanded="false">Book Store<span class="caret"></span></a></li>
-                        <li> <a href="{% url 'youtubecategories' %}" role="button" aria-haspopup="true" aria-expanded="false">Youtube Series<span class="caret"></span></a></li>
+                        <a href="{% url 'products' %}" class="color_black hvr-bounce-in green-hover">Browse All</a> 
+                        <a href="{% url 'categories' %}" role="button" aria-haspopup="true" aria-expanded="false">Book Store</a>
+                        <a href="{% url 'youtubecategories' %}" role="button" aria-haspopup="true" aria-expanded="false">Youtube Series</a>
                     </ul>
                 </div>
                 <hr class="navbarline" id="navbarlinebottom">
@@ -114,7 +114,7 @@
                         <a class="hvr-grow" href="https://www.researchgate.net/profile/Jordan_Peterson2" target="_blank"><img src="{% static 'images/ResearchGate.png' %}" width="30px"/></a>
                         <a class="hvr-grow" href="https://soundcloud.com/jordanpetersonpodcast" target="_blank"><img src="{% static 'images/Soundcloud.png' %}" width="30px"/></a>
                         <a class="hvr-grow" href="https://www.reddit.com/r/JordanPeterson/" target="_blank"><img src="{% static 'images/Reddit.png' %}" width="30px"/></a>
-                        | <a href="#">Contact Us </a>
+                        | <a href="{% url 'register' %}">Contact Us </a>
             </h4>
     
         <!-- Modal for T&Cs -->

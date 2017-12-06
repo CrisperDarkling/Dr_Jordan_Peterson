@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% block content %}
+
+<h1>
+    List of Purchaed yolks
+</h1>
+
+{% for product in products %}
+
+    <p><a href="{% static 'downloads/{{ product.download_link }}' %}" download target="_blank" class="pinky hvr-grow">Download {{ product.name }}</a></p>
+
+    <h4></h4>
+
+{% endfor %}
+
+{% endblock %}
