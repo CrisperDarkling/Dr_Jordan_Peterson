@@ -23,46 +23,64 @@
     
     <nav id="navbar" class="navbar navbar-masthead navbar-default navbar-fixed-top">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
             </button>
             <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
         </div>
         
-        <div class="searchbox">
-            <div class="display">
-                <form action="{% url 'search' %}" method="get">
-                    <input type="text" name="q">
-                    <button type="submit">Search</button>
-                </form>
+        <div id="navbar" class="navbar-collapse collapse">
+            <div class="nav navbar-nav navbar-right">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="topnav">
+                            <li>
+                                <div class="searchbox">
+                                    <form action="{% url 'search' %}" method="get">
+                                        <input type="text" name="q" placeholder="Search Products...">
+                                        <button type="submit">Search</button>
+                                    </form>
+                                </div>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
+                                <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                {% if request.user.is_authenticated %}
+                                    <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log Out</a></li>
+                                {% else %}
+                                    <li><a href="{% url 'login' %}"><i class="fa fa-user-plus"></i>Log In</a></li>
+                                    <li><a href="{% url 'register' %}"><i class="fa fa-sign-in"></i>Register</a></li>
+                                {% endif %}
+                                <li>
+                                    <a href="{% url 'view_cart' %}">
+                                        <i class="fa fa-shipping-cart"></i> Cart
+                                        {% if product_count > 0 %}
+                                        <label class="badge badge-warning">{{ product_count }}</label>
+                                        {% endif %}
+                                    </a>
+                                </li>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="navbarline" id="navbarlinetop">
+                
+                <div class="nav navbar-nav">
+                    <ul class="menubuttons">
+                        <li><a href="{% url 'products' %}" class="color_black hvr-bounce-in green-hover">Browse All</a></li> 
+                        <li><a href="{% url 'categories' %}" role="button" aria-haspopup="true" aria-expanded="false">Book Store<span class="caret"></span></a></li>
+                        <li> <a href="{% url 'youtubecategories' %}" role="button" aria-haspopup="true" aria-expanded="false">Youtube Series<span class="caret"></span></a></li>
+                    </ul>
+                </div>
+                <hr class="navbarline" id="navbarlinebottom">
             </div>
         </div>
-        
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url 'categories' %}">Book Store</a></li>
-                <li><a href="{% url 'youtubecategories' %}">Youtube Series</a></li>
-                        {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log Out</a></li>
-                        {% else %}
-                            <li><a href="{% url 'login' %}"><i class="fa fa-user-plus"></i>Log In</a></li>
-                            <li><a href="{% url 'register' %}"><i class="fa fa-sign-in"></i>Register</a></li>
-                        {% endif %}
-                        <li>
-                            <a href="{% url 'view_cart' %}">
-                                <i class="fa fa-shipping-cart"></i> Cart
-                                {% if product_count > 0 %}
-                                <label class="badge badge-warning">{{ product_count }}</label>
-                                {% endif %}
-                            </a>
-                        </li>
-            </ul>
-        </div>
     </nav>
-    
-
 
     <div class="container">
         

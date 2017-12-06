@@ -1,9 +1,25 @@
+
+.navbar {
+    background-color: black;
+}
+
+.navbar-collapse {
+    margin-right: 50px;
+}
+
+
+
 body {
     font-family: Arial;
     padding-top: 100px;
 }
 
-
+.cats {
+    background: no-repeat center;
+    background-size: cover;
+    height: 300px;
+    margin:20px;
+}
 
 
 
@@ -77,7 +93,7 @@ caption p {
 
 .panel-body {
     height: 100%;
-    border: 1px solid #ddd;
+    border: 3px solid red;
 }
 
 .product-description {

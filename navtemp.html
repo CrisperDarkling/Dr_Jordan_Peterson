@@ -1,0 +1,74 @@
+    <nav class="navbar-fixed" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a href="{% url 'index' %}"><img src="{% static 'images/title.png' %}" width="150px" id="mobilelogo"/></a>
+        </div>       
+
+        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <div class="nav navbar-nav">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="topnav">
+                            <li>
+                                <div class="searchbox">
+                                    <form method="GET" action="{% url 'search' %}" class="navbar-form" role="search">
+                                        <div class="input-group add-on">
+                                            <input class="form-control" id="srch-term" type="text" name="q" placeholder="Search Products..."/>
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default hvr-grow" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                                </div>
+                                        </div>        
+                                    </form>
+                                </div>
+                            </li>
+                            
+                            <li class="dropdown">
+                            <a class="dropdown-toggle color_black oswald" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>My Account
+                            <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                            {% if user.is_authenticated %}
+                                <li><a href="{% url 'profile' %}" class="oswald"><i class="fa fa-user"></i> Profile</a></li>
+                                <li><a href="{% url 'logout' %}" class="oswald"><i class="fa fa-sign-out"></i> Log Out</a></li>
+                            {%  else %}
+                                <li><a href="{% url 'register' %}" class="oswald"><i class="fa fa-user-plus"></i> Sign Up</a></li>
+                                <li><a href="{% url 'login' %}" class="oswald"><i class="fa fa-sign-in"></i> Log In</a></li>
+                            {% endif %}
+                            </ul>
+                            </li>
+                            <li><a href="{% url 'cart' %}" class="color_black oswald green-hover"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                        </div>  
+                    </div>
+                </div>
+
+                <hr class="navbarline" id="navbarlinetop">
+
+                <div class="nav navbar-nav">
+                    <ul class="menubuttons">
+                         <li><a href="{% url 'products' %}" class="color_black hvr-bounce-in green-hover">Browse All</a></li> 
+
+                    {% for category, subcategories in root_categories.items %}
+                            <li class="dropdown" id="category.name">
+                            <a href="{% url 'category' category.id %}" 
+                            class="hvr-bounce-in dropdown-toggle {% if category.name == 'Sale' %} color_red {% else %} color_black {% endif %}" 
+                            role="button" aria-haspopup="true" 
+                            aria-expanded="false"> {{ category.name }} <span class="caret"></span></a>
+
+                            <ul class="dropdown-menu" id="dropdown-menu-{{category.name}}">
+                            {% for sub in subcategories %}
+                                <li><a href="{% url 'category' sub.id %}" class="hvr-grow">{{ sub.name }}</a></li>                    
+                            {% endfor%}
+                            </ul>
+                            </li>
+                    {% endfor %}
+
+
+                        <li><a href="{% url 'blog' %}" class="color_black hvr-bounce-in green-hover"> Blog </a></li> 
+                    </ul>
+                </div>
+                <hr class="navbarline" id="navbarlinebottom">
+                
+
+        </div>
+  </nav>

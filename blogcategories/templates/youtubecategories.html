@@ -4,10 +4,10 @@
 
 
 {% for youtubecategory in blogcategories %}
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+    <div>
+        <div class="col-sm-12 col-md-3 col-lg-6">
             <a href="{% url 'youtube_by_category' youtubecategory.id %}">
-                <div class="col-md-3 cats" style="background-image: url({{ MEDIA_URL }}{{ youtubecategory.image }});">
+                <div class="col-md-4 cats" style="background-image: url({{ MEDIA_URL }}{{ youtubecategory.image }});">
                     <h1>{{ youtubecategory.name }}</h1>
                 </div>
             </a>
