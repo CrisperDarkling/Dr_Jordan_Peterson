@@ -1,17 +1,39 @@
-
-.navbar {
-    background-color: black;
+#navbar {
+    background-color: #331D15;
+    background-image: none;
+    border-bottom: none;
 }
+.navbar-default {
+    
+}
+
 
 .navbar-collapse {
     margin-right: 50px;
 }
 
+.home-card {
+    margin-top: 80px;
+    border: 5px solid #FFAA00;
+    border-radius: 60px;
+    width: 90%;
+    display:center;
+}
+
+
+.home-card-para {
+    background-color: #000000;
+    opacity: 0.8
+}
 
 
 body {
     font-family: Arial;
     padding-top: 100px;
+    background-image: url("../images/jordan-larger.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cats {
@@ -22,11 +44,24 @@ body {
 }
 
 
+hr {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #FFAA00;
+    margin: 1em 0;
+    padding: 0; 
+}
 
 a,
+h1,
+h2,
+h3,
 h4 {
     text-align: center;
-    color: black;
+    color: white;
 }
 
 
@@ -80,11 +115,11 @@ caption p {
     word-wrap: break-word;
 }
 
-.row.row-flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
+/*.row.row-flex {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    margin-top: 30px;*/
+/*}*/
 
 .panel-default {
     border-color: transparent;

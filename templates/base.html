@@ -22,44 +22,59 @@
 <div style="width: 100%">
     
     <nav id="navbar" class="navbar navbar-masthead navbar-default navbar-fixed-top">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-            </button>
-            <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
-        </div>
-        
-        <div class="searchbox">
-            <div class="display">
-                <form action="{% url 'search' %}" method="get">
-                    <input type="text" name="q">
-                    <button type="submit">Search</button>
-                </form>
+        <div class="row">
+            <div class="navbar-header col-md-4">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <!--<img src="../static/images/Maps_of_meaning.png" alt="Maps of Meaning Logo" width="50px">-->
+                <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
+            </div>
+            
+            
+            
+            <div class="navbar-collapse collapse col-md-4 col-md-offset-3">
+                <ul class="nav navbar-nav navbar-right">
+                    <div class="searchbox">
+                        <div class="display">
+                            <form action="{% url 'search' %}" method="get">
+                                <input type="text" name="q">
+                                <button type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>       
+                    {% if request.user.is_authenticated %}
+                        <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log Out</a></li>
+                    {% else %}
+                        <li><a href="{% url 'login' %}"><i class="fa fa-user-plus"></i>Log In</a></li>
+                        <li><a href="{% url 'register' %}"><i class="fa fa-sign-in"></i>Register</a></li>
+                    {% endif %}
+                    <li>
+                        <a href="{% url 'view_cart' %}">
+                            <i class="fa fa-shipping-cart"></i> Cart
+                            {% if product_count > 0 %}
+                            <label class="badge badge-warning">{{ product_count }}</label>
+                            {% endif %}
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
+        <hr class="navbarline">
+        
+        
+        <div class="row">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'categories' %}">Book Store</a></li>
                 <li><a href="{% url 'youtubecategories' %}">Youtube Series</a></li>
-                        {% if request.user.is_authenticated %}
-                            <li><a href="{% url 'profile' %}"><i class="fa fa-user"></i>Profile</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i>Log Out</a></li>
-                        {% else %}
-                            <li><a href="{% url 'login' %}"><i class="fa fa-user-plus"></i>Log In</a></li>
-                            <li><a href="{% url 'register' %}"><i class="fa fa-sign-in"></i>Register</a></li>
-                        {% endif %}
-                        <li>
-                            <a href="{% url 'view_cart' %}">
-                                <i class="fa fa-shipping-cart"></i> Cart
-                                {% if product_count > 0 %}
-                                <label class="badge badge-warning">{{ product_count }}</label>
-                                {% endif %}
-                            </a>
-                        </li>
             </ul>
         </div>
+        
+        
     </nav>
     
 

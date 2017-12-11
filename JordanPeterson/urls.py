@@ -17,6 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views import static
 from .settings import MEDIA_ROOT
+from about.views import get_about
 from accounts import urls as accounts_urls
 from blog import urls as blog_urls
 from blogcategories import urls as blogcategories_urls
@@ -37,6 +38,7 @@ from purchased import urls as purchased_urls
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_index, name="index"),
+    url(r'^about$', get_about, name="about"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^blogcategories/', include(blogcategories_urls)),
