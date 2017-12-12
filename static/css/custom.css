@@ -2,15 +2,31 @@
     background-color: #331D15;
     background-image: none;
     border-bottom: none;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
-.navbar-default {
-    
+
+.navbar-top-row {
+    width:90%;
+}
+.navbar-bottom-row {
+    width:90%;
+    margin-left: 60rem;
+}
+
+.navbar-buttons {
+    margin-left: 10rem;
+    padding-left: 1rem;
 }
 
 
 .navbar-collapse {
     margin-right: 50px;
 }
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+
 
 .home-card {
     margin-top: 80px;
@@ -35,6 +51,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+.category-cards {
+    margin-left: 26rem;
+    margin-top: 3rem;
+}
+.category-card {
+
+    
+}
+
 
 .cats {
     background: no-repeat center;
@@ -76,9 +105,11 @@ h4 {
     margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-top: 1px solid #ededed;
+    background-color: #331D15;
     color: #A9A9A9;
     text-align: center;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 .icon-bar {
