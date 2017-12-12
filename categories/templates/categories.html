@@ -3,7 +3,7 @@
 {% block content %}
 {% for category in categories %}
     <div class="category-cards">  
-        <div class="col-md-4 category-card">
+        <div class="col-md-4">
             <a href="{% url 'products_by_category' category.id %}">
                 <div class="col-md-4 cats" style="background-image: url({{ MEDIA_URL }}{{ category.image }});">
                     <h1>{{ category.name }}</h1>

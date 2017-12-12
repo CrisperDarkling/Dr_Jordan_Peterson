@@ -28,8 +28,9 @@
 /*////////////////////////////////////////////////////////////////////////////////*/
 
 
-.home-card {
+.about-card {
     margin-top: 80px;
+    margin-left: 7rem;
     border: 5px solid #FFAA00;
     border-radius: 60px;
     width: 90%;
@@ -37,7 +38,7 @@
 }
 
 
-.home-card-para {
+.about-card-para {
     background-color: #000000;
     opacity: 0.8
 }
@@ -59,19 +60,22 @@ body {
     margin-left: 26rem;
     margin-top: 3rem;
 }
-.category-card {
-
-    
-}
 
 
 .cats {
     background: no-repeat center;
     background-size: cover;
-    height: 300px;
+    border: 2px solid #FFAA00;
+    height: 30rem;
+    width:25rem;
     margin:20px;
 }
+/*////////////////////////////////////////////////////////////////////////////////*/
 
+.YT-cards {
+    margin-left: 26rem;
+    margin-top: 3rem;
+}
 
 hr {
     text-align: center;
