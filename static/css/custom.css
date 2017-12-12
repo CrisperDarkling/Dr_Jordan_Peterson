@@ -6,17 +6,21 @@
     border-bottom-right-radius: 40px;
 }
 
+.navbar-header {
+    margin-left: 10rem;
+    margin-top: 1rem;
+}
 .navbar-top-row {
     width:90%;
 }
 .navbar-bottom-row {
     width:90%;
-    margin-left: 60rem;
+    display:center;
+    /*margin-left: 60rem;*/
 }
 
 .navbar-buttons {
     margin-left: 10rem;
-    padding-left: 1rem;
 }
 
 
@@ -27,9 +31,29 @@
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 
+.alert-card {
+    margin-top: 20rem;
+}
 
+.pushdown {
+    margin-top: 10rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+.sign-row {
+    margin-top: 55rem;
+}
+
+
+.sign-btn {
+    margin-left: 40rem;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////*/
 .about-card {
-    margin-top: 80px;
+    margin-top: 1rem;
     margin-left: 7rem;
     border: 5px solid #FFAA00;
     border-radius: 60px;
@@ -39,7 +63,7 @@
 
 
 .about-card-para {
-    background-color: #000000;
+    background-color: black;
     opacity: 0.8
 }
 
@@ -76,6 +100,19 @@ body {
     margin-left: 26rem;
     margin-top: 3rem;
 }
+
+
+.blogpost-set {
+    margin-top: 3rem;
+}
+
+.viewpost-card {
+    margin-top: 20rem;
+}
+.card-row {
+    margin-top: 20rem;
+}
+
 
 hr {
     text-align: center;
@@ -150,11 +187,10 @@ caption p {
     word-wrap: break-word;
 }
 
-/*.row.row-flex {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    margin-top: 30px;*/
-/*}*/
+.row.row-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .panel-default {
     border-color: transparent;

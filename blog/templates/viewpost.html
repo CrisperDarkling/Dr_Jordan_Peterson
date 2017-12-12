@@ -1,27 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="row">
-        <div class="col-md-2 col-sm-3 text-center">
-            <a class="story-img" href="#">
-                <img src="{{ MEDIA_URL }}{{ post.author.profile.image }}"
-                     style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
-            </a>
-        </div>
-        <div class="col-md-10 col-sm-9">
-            
+    <div class="row viewpost-card">
+        <div class="col-md-12">
             <h3>{{ post.title }}</h3>
-            <div class="row">
-                <div class="col-xs-9">
-
-                    <iframe width="560" height="315" src="{{ post.youtube_link }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-
-                    <p>{{ post.content }}</p>
-                    <button class="btn btn-default" onclick="location.href='{% url 'posts' %}'">Back To Blog</button>
-                    <button class="btn btn-default" onclick="location.href='{% url 'editpost' post.id %}'">Edit</button>
-                    <p>{{ post.published_date }}</p>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <iframe width="560" height="315" src="{{ post.youtube_link }}" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>   
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <p>{{ post.content }}</p>
+                <button class="btn btn-default" onclick="location.href='{% url 'posts' %}'">Back To Blog</button>
+                <p>{{ post.published_date }}</p>
             </div>
         </div>
     </div>
+    
 {% endblock %}
