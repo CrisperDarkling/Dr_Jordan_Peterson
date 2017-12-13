@@ -102,6 +102,7 @@ body {
     margin-top: 3rem;
 }
 
+
 .YT-cards h4 {
     display:inline-block;
 }
@@ -204,11 +205,13 @@ caption p {
 .panel-body {
     height: 100%;
     border: 3px solid red;
+    color: black;
 }
 
-.product-description {
+.products  {
     min-height: 40px;
-}
+    color: black;
 
+}
 
 

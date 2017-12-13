@@ -2,8 +2,6 @@
 {% block content %}
 
 <div class="row row-flex">
-    
-    
    {% for product in products %} 
 
     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3 col-md-offset-2  display panel panel-default">
@@ -11,9 +9,9 @@
         <div class="panel=body">
             <img class="product" src="{{ MEDIA_URL }}{{ product.image }}"/>
         
-            <h3> {{ product.name }}</h3>
-            <p class="product-description"> {{ product.description }} </p>
-            <p> {{ product.price }}</p>
+            <h3 class="products"> {{ product.name }}</h3>
+            <p class="products"> {{ product.description }} </p>
+            <p class="products"> €{{ product.price }}</p>
             
             <form method="post" action="{% url 'add_to_cart' product.id %}">
                 {% csrf_token %}
