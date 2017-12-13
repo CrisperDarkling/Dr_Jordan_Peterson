@@ -41,7 +41,7 @@
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 .sign-row {
-    margin-top: 55rem;
+    margin-top: 65rem;
 }
 
 
@@ -70,6 +70,7 @@
 
 body {
     font-family: Arial;
+    color:white;
     margin-top: 20rem;
     background-image: url("../images/jordan-larger.jpg");
     background-attachment: fixed;
