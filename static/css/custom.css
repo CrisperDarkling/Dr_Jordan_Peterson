@@ -178,9 +178,9 @@ h4 {
 .badge-warning[href] {
     background-color: #c67605;
 }
-.products-row {
-    margin-left: 40rem;
-}
+/*.products-row {*/
+/*    margin-left: 40rem;*/
+/*}*/
 
 .product-image {
     background-size: contain;
