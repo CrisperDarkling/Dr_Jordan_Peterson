@@ -41,7 +41,7 @@
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 .sign-row {
-    margin-top: 65rem;
+    margin-top: 67rem;
 }
 
 
@@ -102,6 +102,9 @@ body {
     margin-top: 3rem;
 }
 
+.YT-cards h4 {
+    display:inline-block;
+}
 
 .blogpost-set {
     margin-top: 3rem;
