@@ -4,28 +4,90 @@
 <div class="row row-flex">
    {% for product in products %} 
 
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-3 col-md-offset-2  display panel panel-default">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-2  display panel panel-default">
         
-        <div class="panel=body">
-            <img class="product" src="{{ MEDIA_URL }}{{ product.image }}"/>
-        
-            <h3 class="products"> {{ product.name }}</h3>
-            <p class="products"> {{ product.description }} </p>
-            <p class="products"> €{{ product.price }}</p>
-            
-            <form method="post" action="{% url 'add_to_cart' product.id %}">
-                {% csrf_token %}
-                <div class="input-group">
-                    <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity">
-                    <span class="input-group-btn">
-                        <button class="btn btn-success" type="submit">Add</button>
-                    </span>
-                </div>
+        <div class="panel-body">
+            <div class="row">
+                <img class="product-image img-responsive center-block col-md-12" src="{{ MEDIA_URL }}{{ product.image }}"/>
+            </div>
+            <div class="row">
+                <p class="products col-md-12"><strong>{{ product.name }}</strong></p>
+                <p class="products col-md-12"><u>{{ product.book_author }}</u></p>
+            </div>
+            <!--<div class="row">-->
+            <!--    <p class="products col-md-12">by {{ product.book_author }}</p>-->
+            <!--</div>-->
+                <!--<p class="products"> {{ product.description|truncatewords:30 }} </p>-->
+                <p class="products"> €{{ product.price }}</p>
                 
-            </form>
-            
+                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <!--<button class="btn btn-success" type="submit">Add</button>-->
+                            <p><a class="btn btn-sm btn-success pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}" 
+                            title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></p>
+                        </span>
+                    </div>
+                    
+                </form>
         </div>
     </div>
 {% endfor %}
 </div>
+
+
+{% for product in products %}
+<div id="myModal{{product.id}}" class="modal fade products" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title oswald products"><strong>{{ product.name }} by {{ product.book_author }}</strong></h3>
+      </div>
+      <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <img src="{{ MEDIA_URL }}{{ product.image }}" class="img-responsive" alt="Product Image"/>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="pop-up-text">
+                                <p>{{ product.description}} </p>
+                                <p> €{{ product.price }} </p>
+
+                                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                                    {% csrf_token %}
+                            </br></br>
+
+                                        Quantity
+                                        <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity"/>
+                                        <button type="submit">Add To Cart</button>
+                                    </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+{% endfor %}
+
+
+
+
+
 {% endblock %}
+
+
+

@@ -178,15 +178,24 @@ h4 {
 .badge-warning[href] {
     background-color: #c67605;
 }
+.products-row {
+    margin-left: 40rem;
+}
 
-.product {
+.product-image {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+    width: 15rem;
+    height: 15rem;
 }
+
+.products  {
+    /*min-height: 10rem;*/
+    color: black;
+}
+
+
 
 caption p {
     word-wrap: break-word;
@@ -198,20 +207,11 @@ caption p {
 }
 
 .panel-default {
-    border-color: transparent;
-    padding: 0 10px;
+    padding: 0 1rem;
+    margin-left: 5rem;
+    border: 2px solid #FFAA00;
 }
 
 .panel-body {
-    height: 100%;
-    border: 3px solid red;
-    color: black;
+    height: 70%;
 }
-
-.products  {
-    min-height: 40px;
-    color: black;
-
-}
-
-

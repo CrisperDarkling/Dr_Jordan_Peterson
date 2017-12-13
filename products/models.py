@@ -3,6 +3,7 @@ from categories.models import Category
 from django.db import models
 
 class Products(models.Model):
+    book_author = models.CharField(max_length=200, default="default")
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
