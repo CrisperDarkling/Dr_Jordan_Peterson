@@ -82,6 +82,7 @@ INSTALLED_APPS = [
     "products",
     "purchased",
     "search",
+    "storages",
 ]
 
 MIDDLEWARE = [
