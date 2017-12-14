@@ -13,41 +13,62 @@
 {% endblock %}
 
 {% block content %}
-<div class="row row=flex">
-    {% for item in cart_items %}
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">
-        <div class="panel-body">
-            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-            <div class="caption">
-                <h3>{{ item.product.name }}</h3>
-                <p class="product-description">{{ item.product.description }}</p>
-                <p>{{ item.quantity }}</p>
-                <p>{{ item.product.price }}</p>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-</div>
 <div class="row">
-    <p>Total</p>
-    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>{{ total }}</p>
+    <div class=" col-sm-8 col-sm-offset-2">
+        <table class="table cart-table">
+            <thead>
+            <tr>
+                <th></th>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in cart_items %}
+                <tr>
+                    <td><img class="product-image" src="{{ MEDIA_URL }}{{ item.product.image }}"></td>
+                    <td><strong>{{ item.product.name }}</strong> by {{ item.product.book_author }}</td>
+                    <!--<td>{{ item.product.description }}</td>-->
+                    <td>{{ item.quantity }}</td>
+                    <td>€{{ item.product.price }}</td>
+                    <td>
+                        <form method="post" action="{% url 'adjust_cart' item.id %}">
+                            {% csrf_token %}
+                            Quantity
+                            <input name='quantity' type="number" min="0" max="999">
+                            <button type="submit">Adjust</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td><strong><u>€{{ total }}</u></strong></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
-    <legend>Payment Details</legend>
+    <h2 class="legend"><strong><u>Payment Details</u></strong></h2>
+    <hr>
     <div id="credit-card-errors" style="display:none">
         <div class="alert-message block-message-error" id="stripe-error-message"></div>
     </div>
     
-    <div class="form-group col-md-6">
+    <div class="form-group order-form col-md-4 col-md-offset-1">
         {{ order_form|as_bootstrap }}
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group payment-form col-md-4 col-md-offset-2">
         {{ payment_form|as_bootstrap }}
     </div>
 
     {% csrf_token %}
-    <div class="form-group col-md-12">
+    <div class="form-group col-md-8 col-md-offset-4">
         <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
     </div>
 </form>
