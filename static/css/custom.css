@@ -207,6 +207,11 @@ h4 {
     height: 15rem;
 }
 
+.cart-product-image {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .products  {
     /*min-height: 10rem;*/
     color: black;
