@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io"]
+ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io", "dr-jordan-peterson-bookstore.herokuapp.com"]
 
 
 #console
