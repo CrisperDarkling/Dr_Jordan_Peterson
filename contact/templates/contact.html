@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="row">
-        <div class="col-sm-12 contactform">
+        <div class="col-sm-8 col-sm-offset-2 contactform">
             <h1> Contact Form </h1>
             <form role="form" action="{% url 'contact' %}" method="POST">
                 {% csrf_token %}

@@ -30,6 +30,36 @@ DEBUG = True
 ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io"]
 
 
+#console
+# EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' 
+# DEFAULT_FROM_EMAIL='testing@example.com'
+# EMAIL_HOST_USER=''
+# EMAIL_HOST_PASSWORD=''
+# EMAIL_USE_TLS=False 
+# EMAIL_PORT=1025
+
+
+#gmail
+# EMAIL_USE_TLS = True       
+# EMAIL_HOST = 'smtp.gmail.com'      
+# EMAIL_PORT = 587     
+# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')     
+# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+# EMAIL_HOST = 'smtp.gmail.com'
+
+# EMAIL_HOST_USER = 'user'
+
+# EMAIL_HOST_PASSWORD = 'your-password'
+
+# EMAIL_PORT = 587
+
+# EMAIL_USE_TLS = True
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -184,6 +184,11 @@ h4 {
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+    background-color: #FFAA00;
+}
+
+.modal-content {
+    border: 2px solid #FFAA00;
 }
 
 .label-warning[href],
