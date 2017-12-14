@@ -14,10 +14,6 @@
                 <p class="products col-md-12"><strong>{{ product.name }}</strong></p>
                 <p class="products col-md-12"><u>{{ product.book_author }}</u></p>
             </div>
-            <!--<div class="row">-->
-            <!--    <p class="products col-md-12">by {{ product.book_author }}</p>-->
-            <!--</div>-->
-                <!--<p class="products"> {{ product.description|truncatewords:30 }} </p>-->
                 <p class="products"> €{{ product.price }}</p>
                 
                 <form method="post" action="{% url 'add_to_cart' product.id %}">
