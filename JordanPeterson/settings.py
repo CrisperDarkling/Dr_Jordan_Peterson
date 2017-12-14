@@ -26,6 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+USE_S3 = os.environ.get("USE_S3", True)
 
 ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io", "dr-jordan-peterson-bookstore.herokuapp.com"]
 
@@ -172,49 +173,43 @@ USE_L10N = True
 
 USE_TZ = True
 
-MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-STATICFILES_DIRS = (
-   os.path.join(BASE_DIR, "static"),
-    )
-    
+
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+
+if USE_S3:
+    AWS_S3_OBJECT_PARAMETERS = {  
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    
+    AWS_STORAGE_BUCKET_NAME = 'jordan-peterson-bookstore'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+    
+    MEDIAFILES_LOCATION = 'media'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+
+    STATICFILES_LOCATION = 'static'
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    
+    
+    
+    
+    
+    
+
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE")
 STRIPE_SECRET = os.getenv("STRIPE_SECRET")
-
-
-
-
-# STATIC_URL = '/static/'
-# MEDIA_URL = '/media/'
-
-
-
-
-
-
-AWS_S3_OBJECT_PARAMETERS = {  
-    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-    'CacheControl': 'max-age=94608000',
-}
-
-
-AWS_STORAGE_BUCKET_NAME = 'jordan-peterson-bookstore'
-AWS_S3_REGION_NAME = 'eu-west-1'
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
-
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-MEDIAFILES_LOCATION = 'media'
-
-STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = "custom_storages.StaticStorage"
-
-
-
-
-
