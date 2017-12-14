@@ -19,8 +19,8 @@
 
 <body>
 <!-- Fixed masthead -->
-<div style="width: 100%">
     
+<div class="container">
     <nav id="navbar" class="navbar navbar-masthead navbar-fixed-top">
         <div class="row navbar-top-row">
             <div class="navbar-header col-md-6">
@@ -38,8 +38,8 @@
                     <div class="searchbox">
                         <div class="display">
                             <form action="{% url 'search' %}" method="get">
-                                <input type="text" name="q">
-                                <button type="submit">Search</button>
+                                <input class="search-input" type="text" name="q">
+                                <button class="btn btn-info hvr-grow" type="submit">Search</button>
                             </form>
                         </div>
                     </div>       
@@ -113,7 +113,6 @@
         </div>
     </footer>
     
-    
-</div>
+    </div>
 </body>
 </html>

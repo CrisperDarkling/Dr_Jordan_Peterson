@@ -7,7 +7,7 @@ from django.utils import timezone
 # Create your views here.
 
 def blogposts(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render (request, "blogposts.html", {"posts": posts})
 
 def viewpost(request, id):
@@ -59,7 +59,7 @@ def addcomment(request, post_id):
     
    
 def youtube_by_category(request, id):
-    youtubeposts = Post.objects.filter(youtubecategory=id)
+    youtubeposts = Post.objects.filter(youtubecategory=id, published_date__lte=timezone.now()).order_by('published_date')
     return render(request, "blogposts.html", {"youtubecategories": youtubeposts})
     
     

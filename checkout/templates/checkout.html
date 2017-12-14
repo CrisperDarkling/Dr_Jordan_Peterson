@@ -3,7 +3,7 @@
 {% load bootstrap_tags %}
 
 {% block head_js %}
-<script type="text/javascript" src="https://js.stripe.come/v2/"></script>
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
     //<![CDATA[
     Stripe.publishableKey = "{{ publishable }}";
@@ -13,6 +13,10 @@
 {% endblock %}
 
 {% block content %}
+
+{{ payment_form.errors }}
+{{ payment_form.non_field_errors }}
+
 <div class="row">
     <div class=" col-sm-6 col-sm-offset-3">
         <table class="table cart-table">

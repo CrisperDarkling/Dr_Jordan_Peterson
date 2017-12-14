@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-USE_S3 = os.environ.get("USE_S3", True)
+USE_S3 = os.environ.get("USE_S3", False)
 
 ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io", "dr-jordan-peterson-bookstore.herokuapp.com"]
 
@@ -211,5 +211,5 @@ if USE_S3:
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
-STRIPE_PUBLISHABLE = os.getenv("STRIPE_PUBLISHABLE")
-STRIPE_SECRET = os.getenv("STRIPE_SECRET")
+STRIPE_PUBLISHABLE = os.environ.get("STRIPE_PUBLISHABLE")
+STRIPE_SECRET = os.environ.get("STRIPE_SECRET")

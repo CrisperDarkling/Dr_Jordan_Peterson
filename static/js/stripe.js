@@ -8,6 +8,7 @@ $(function() {
             cvc: $("#id_cvv").val()
         };
         
+        
     Stripe.createToken(card, function(status, response) {
         if (status === 200) {
             $("#credit-card-errors").hide();

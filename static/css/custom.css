@@ -1,3 +1,7 @@
+body {
+    width:100%;
+}
+
 #navbar {
     background-color: #331D15;
     background-image: none;
@@ -7,7 +11,7 @@
 }
 
 .navbar-header {
-    margin-left: 10rem;
+    /*margin-left: 10rem;*/
     margin-top: 1rem;
 }
 .navbar-top-row {
@@ -157,7 +161,9 @@ h4 {
     position:relative;
     padding: 1.5px;
 }
-
+.search-input {
+    color:black;
+}
 
 .footer {
     margin-top: 40px;
@@ -246,6 +252,10 @@ caption p {
     border-radius:20px;
     border: 2px solid #FFAA00;
 }
+
+/*.cart-table thead {*/
+/*    border-radius:20px;*/
+/*}*/
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 
