@@ -1,6 +1,7 @@
 {% load static from staticfiles %}
 
 <!DOCTYPE html>
+
 <head>
     <title>Dr. Jordan Peterson Bookstore</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
@@ -8,19 +9,16 @@
     <link rel="stylesheet" href="{% static 'css/custom.css' %}" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
-    {% block head_js %}
-    {% endblock head_js %}
-<style>
-
-
-</style>
+    {% block head_js %} {% endblock head_js %}
+    <style>
+    </style>
 
 </head>
 
 <body>
-<!-- Fixed masthead -->
-    
-<div class="container">
+    <!-- Fixed masthead -->
+
+    <!--<div class="container">-->
     <nav id="navbar" class="navbar navbar-masthead navbar-fixed-top">
         <div class="row navbar-top-row">
             <div class="navbar-header col-md-6">
@@ -30,9 +28,9 @@
                 <!--<img src="../static/images/Maps_of_meaning.png" alt="Maps of Meaning Logo" width="50px">-->
                 <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
             </div>
-            
-            
-            
+
+
+
             <div class="navbar-collapse collapse col-md-6">
                 <ul class="nav navbar-nav navbar-right">
                     <div class="searchbox">
@@ -42,14 +40,14 @@
                                 <button class="btn btn-info hvr-grow" type="submit">Search</button>
                             </form>
                         </div>
-                    </div>       
+                    </div>
                     {% if request.user.is_authenticated %}
-                        <li><a href="{% url 'profile' %}">Profile<i class="fa fa-user"></i></a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="{% url 'logout' %}">Log Out<i class="fa fa-sign-out"></i></a></li>
+                    <li><a href="{% url 'profile' %}">Profile<i class="fa fa-user"></i></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{% url 'logout' %}">Log Out<i class="fa fa-sign-out"></i></a></li>
                     {% else %}
-                        <li><a href="{% url 'login' %}">Log In<i class="fa fa-user-plus"></i></a></li>
-                        <li><a href="{% url 'register' %}">Register<i class="fa fa-sign-in"></i></a></li>
+                    <li><a href="{% url 'login' %}">Log In<i class="fa fa-user-plus"></i></a></li>
+                    <li><a href="{% url 'register' %}">Register<i class="fa fa-sign-in"></i></a></li>
                     {% endif %}
                     <li>
                         <a href="{% url 'view_cart' %}">
@@ -62,10 +60,10 @@
                 </ul>
             </div>
         </div>
-        
+
         <hr class="navbarline">
-        
-        
+
+
         <div class="row navbar-bottom-row">
             <div class="col-md-6 col-md-offset-4">
                 <ul class="nav navbar-nav">
@@ -75,44 +73,42 @@
                 </ul>
             </div>
         </div>
-        
-        
+
+
     </nav>
-    
-    
+
+
     <div class="pushdown">
         {% if messages %}
-            <div class="alert alert-success">
-                <div class="messages">
-                    {% for message in messages %}
-                        {{ message }}
-                    {% endfor %}
-                </div>
+        <div class="alert alert-success">
+            <div class="messages">
+                {% for message in messages %} {{ message }} {% endfor %}
             </div>
+        </div>
         {% endif %}
     </div>
-    
-    
-    
-        {% block content %}
-        {% endblock %}
-    
-    <footer class="footer footer-card col-sm-6 col-sm-offset-3"></a>
+
+
+
+    {% block content %} {% endblock %}
+
+    <footer class="footer footer-card col-sm-6 col-sm-offset-3">
+        </a>
         <div class="row col-sm-12">
             <h4>
-                Follow Dr. Jordan Peterson on 
+                Follow Dr. Jordan Peterson on
                 <a class="hvr-grow" href="https://www.facebook.com/drjordanpeterson/" target="_blank"><img src="{% static 'images/facebook2.png' %}" width="30px"/></a>
                 <a class="hvr-grow" href="https://www.youtube.com/user/JordanPetersonVideos" target="_blank"><img src="{% static 'images/youtube2.png' %}" width="30px"/></a>
-                        <a class="hvr-grow" href="https://twitter.com/jordanbpeterson" target="_blank"><img src="{% static 'images/twitter2.png' %}" width="30px"/></a>
-                        <a class="hvr-grow" href="https://www.patreon.com/jordanbpeterson" target="_blank"><img src="{% static 'images/patreon.png' %}" width="30px"/></a>
-                        <a class="hvr-grow" href="https://www.researchgate.net/profile/Jordan_Peterson2" target="_blank"><img src="{% static 'images/ResearchGate.png' %}" width="30px"/></a>
-                        <a class="hvr-grow" href="https://soundcloud.com/jordanpetersonpodcast" target="_blank"><img src="{% static 'images/soundcloud.png' %}" width="30px"/></a>
-                        <a class="hvr-grow" href="https://www.reddit.com/r/JordanPeterson/" target="_blank"><img src="{% static 'images/reddit3.png' %}" width="30px"/></a>
-                        | <a href="{% url 'contact' %}">Contact Us </a>
+                <a class="hvr-grow" href="https://twitter.com/jordanbpeterson" target="_blank"><img src="{% static 'images/twitter2.png' %}" width="30px"/></a>
+                <a class="hvr-grow" href="https://www.patreon.com/jordanbpeterson" target="_blank"><img src="{% static 'images/patreon.png' %}" width="30px"/></a>
+                <a class="hvr-grow" href="https://www.researchgate.net/profile/Jordan_Peterson2" target="_blank"><img src="{% static 'images/ResearchGate.png' %}" width="30px"/></a>
+                <a class="hvr-grow" href="https://soundcloud.com/jordanpetersonpodcast" target="_blank"><img src="{% static 'images/soundcloud.png' %}" width="30px"/></a>
+                <a class="hvr-grow" href="https://www.reddit.com/r/JordanPeterson/" target="_blank"><img src="{% static 'images/reddit3.png' %}" width="30px"/></a> | <a href="{% url 'contact' %}">Contact Us </a>
             </h4>
         </div>
     </footer>
-    
-    </div>
+
+    <!--</div>-->
 </body>
+
 </html>

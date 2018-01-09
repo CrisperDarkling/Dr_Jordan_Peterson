@@ -62,14 +62,15 @@ body {
     border: 5px solid #FFAA00;
     border-radius: 60px;
     width: 90%;
-    display:center;
-}
-
-
-.about-card-para {
     background-color: black;
-    /*opacity: 0.8*/
+    opacity: 0.5;
 }
+
+
+/*.about-card-para {*/
+    /*background-color: black;*/
+    /*opacity: 0.1;*/
+/*}*/
 
 
 body {
@@ -134,6 +135,10 @@ figcaption {
     margin-top: 20rem;
 }
 
+/*.bg-card {*/
+/*    background-color: black;*/
+/*    opacity: 0.8*/
+/*}*/
 
 hr {
     text-align: center;
@@ -165,8 +170,12 @@ h4 {
     color:black;
 }
 
+.container {
+    height: 50px;
+}
+
 .footer {
-    margin-top: 40px;
+    margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #331D15;
