@@ -62,13 +62,9 @@ body {
     border: 5px solid #FFAA00;
     border-radius: 60px;
     width: 90%;
-    /*background-color: black;*/
-    /*opacity: 0.5;*/
-}
-
-.about-card-para {
-    background-color: red;
-    opacity: 0.8;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    
 }
 
 
@@ -118,9 +114,19 @@ figcaption {
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 
-.YT-cards {
+.YT-set {
     margin-left: 26rem;
     margin-top: 3rem;
+}
+
+.YT-cards {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.blogposts-card {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .blogpost-set {
@@ -129,6 +135,8 @@ figcaption {
 
 .viewpost-card {
     margin-top: 20rem;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
 }
 .card-row {
     margin-top: 20rem;

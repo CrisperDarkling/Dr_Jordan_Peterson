@@ -2,13 +2,13 @@
 
 {% block content %}
 {% for youtubecategory in blogcategories %}
-    <div id=".YT-cards" class="YT-cards">
+    <div class="YT-set">
         <!--<div class="col-sm-12 col-md-3 col-lg-6">-->
-        <div class="col-md-2 col-md-offset-1">
+        <div class="YT-cards col-md-2 col-md-offset-1">
             <a href="{% url 'youtube_by_category' youtubecategory.id %}">
                 <figure>
                     <div class="col-md-4 cats" style="background-image: url({{ MEDIA_URL }}{{ youtubecategory.image }});"></div>
-                    <figcaption>{{ youtubecategory.name }}</figcaption>
+                    <figcaption class="YT-cards">{{ youtubecategory.name }}</figcaption>
                 </figure>
             </a>
         </div>
