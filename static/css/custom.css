@@ -87,6 +87,10 @@ body {
     margin-bottom: 15rem;
 }
 
+.category-bg {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+}
 
 .cats {
     background: no-repeat center;
@@ -131,6 +135,8 @@ figcaption {
 
 .blogpost-set {
     margin-top: 3rem;
+    /*background: rgb(0, 0, 0);*/
+    /*background: rgba(0, 0, 0, 0.5);*/
 }
 
 .viewpost-card {
@@ -177,9 +183,9 @@ h4 {
     color:black;
 }
 
-.container {
-    height: 50px;
-}
+/*.container {*/
+/*    height: 50px;*/
+/*}*/
 
 .footer {
     margin-top: 20px;
