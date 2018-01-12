@@ -64,7 +64,7 @@ body {
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 .about-card {
-    /*margin-top: 1rem;*/
+    /*margin-bottom: 10rem;*/
     margin-left: 7rem;
     border: 5px solid #FFAA00;
     border-radius: 60px;
@@ -78,7 +78,7 @@ body {
 body {
     font-family: Arial;
     color:white;
-    margin-top: 20rem;
+    margin-top: 10rem;
     background-image: url("../images/jordan-larger.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -310,7 +310,28 @@ caption p {
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 
+@media only screen and (max-width: 1243px) {
+    .about-card {
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-card {
+        margin-top: 14rem;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .about-card {
+        margin-top: 1rem;
+    }
+}
+
 @media only screen and (max-width: 991px) {
+    .about-card {
+        margin-top: 7rem;
+    }
     .navbar-header {
         margin-left: 35rem;
     }
@@ -332,12 +353,28 @@ caption p {
 }
 
 @media only screen and (max-width: 870px) {
+    .about-card {
+        margin-left: 2rem;
+    }
     .navbar-header {
         margin-left: 25rem;
     }
     .navbar-right {
         margin-top: 1rem;
         margin-left: 19rem;
+    }
+}
+
+@media only screen and (max-width: 806px) {
+    .about-card {
+        margin-top: 13rem;
+        margin-right: 10rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .about-card {
+        margin-top: 11rem;
     }
 }
 
