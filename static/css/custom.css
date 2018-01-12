@@ -11,12 +11,18 @@ body {
 }
 
 .navbar-header {
-    /*margin-left: 10rem;*/
+    margin-left: 5rem;
     margin-top: 1rem;
 }
 .navbar-top-row {
     width:90%;
 }
+
+.navbar-right {
+    margin-top: 1rem;
+    margin-left: 15rem;
+}
+
 .navbar-bottom-row {
     width:90%;
     display:center;
@@ -27,10 +33,54 @@ body {
     margin-left: 10rem;
 }
 
-
-.navbar-collapse {
-    margin-right: 50px;
+@media only screen and (max-width: 991px) {
+    .navbar-header {
+        margin-left: 35rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 27rem;
 }
+}
+
+@media only screen and (max-width: 870px) {
+    .navbar-header {
+        margin-left: 25rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 19rem;
+}
+}
+
+@media only screen and (max-width: 690px) {
+    .navbar-header {
+        margin-left: 17rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 11rem;
+}
+    
+}
+
+@media only screen and (max-width: 520px) {
+    .navbar-header {
+        margin-left: 10rem;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar-header {
+        margin-left: 5rem;
+    }
+    
+}
+
+/*.navbar-collapse {*/
+/*    margin-left: 8rem;*/
+/*}*/
 
 
 /*////////////////////////////////////////////////////////////////////////////////*/
@@ -177,10 +227,12 @@ h4 {
 .searchbox {
     display:inline-block;
     position:relative;
+    margin-left: 2rem;
     padding: 1.5px;
 }
 .search-input {
     color:black;
+    width:10rem;
 }
 
 /*.container {*/
