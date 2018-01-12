@@ -39,7 +39,6 @@ body {
 /*    margin-left: 8rem;*/
 /*}*/
 
-
 /*////////////////////////////////////////////////////////////////////////////////*/
 
 .alert-card {
@@ -51,13 +50,19 @@ body {
 }
 
 /*////////////////////////////////////////////////////////////////////////////////*/
-.sign-row {
-    margin-top: 67rem;
+.sign-up {
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 
+/*.sign-row {*/
+/*    margin-top: 67rem;*/
+/*}*/
+
+
 .sign-btn {
-    margin-left: 40rem;
+    margin-left:21rem;
 }
 
 
@@ -326,6 +331,9 @@ caption p {
     .about-card {
         margin-top: 1rem;
     }
+    .sign-btn {
+    margin-left:17rem;
+}
 }
 
 @media only screen and (max-width: 991px) {
@@ -349,6 +357,9 @@ caption p {
         text-align: center;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
+    }
+    .sign-btn {
+    margin-left:30rem;
     }
 }
 
@@ -376,6 +387,9 @@ caption p {
     .about-card {
         margin-top: 11rem;
     }
+    .sign-btn {
+    margin-left:25rem;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -385,6 +399,18 @@ caption p {
     .navbar-right {
         margin-top: 1rem;
         margin-left: 11rem;
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .sign-btn {
+    margin-left:20rem;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .sign-btn {
+    margin-left:14rem;
     }
 }
 
