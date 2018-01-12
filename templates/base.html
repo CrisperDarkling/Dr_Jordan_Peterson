@@ -102,22 +102,23 @@
 
 
     {% block content %} {% endblock %}
-
-    <footer class="footer footer-card col-sm-6 col-sm-offset-3">
-        </a>
-        <div class="row col-sm-12">
-            <h4>
-                Follow Dr. Jordan Peterson on
-                <a class="hvr-grow" href="https://www.facebook.com/drjordanpeterson/" target="_blank"><img src="{% static 'images/facebook2.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://www.youtube.com/user/JordanPetersonVideos" target="_blank"><img src="{% static 'images/youtube2.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://twitter.com/jordanbpeterson" target="_blank"><img src="{% static 'images/twitter2.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://www.patreon.com/jordanbpeterson" target="_blank"><img src="{% static 'images/patreon.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://www.researchgate.net/profile/Jordan_Peterson2" target="_blank"><img src="{% static 'images/ResearchGate.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://soundcloud.com/jordanpetersonpodcast" target="_blank"><img src="{% static 'images/soundcloud.png' %}" width="30px"/></a>
-                <a class="hvr-grow" href="https://www.reddit.com/r/JordanPeterson/" target="_blank"><img src="{% static 'images/reddit3.png' %}" width="30px"/></a> | <a href="{% url 'contact' %}">Contact Us </a>
-            </h4>
-        </div>
-    </footer>
+    <div class="row">
+        <footer class="footer footer-card col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-4 col-sm-offset-3 col-xs-4 col-xs-offset-3">
+            </a>
+            <div>
+                <h4>
+                    Follow Dr. Jordan Peterson on
+                    <a class="hvr-grow" href="https://www.facebook.com/drjordanpeterson/" target="_blank"><img src="{% static 'images/facebook2.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://www.youtube.com/user/JordanPetersonVideos" target="_blank"><img src="{% static 'images/youtube2.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://twitter.com/jordanbpeterson" target="_blank"><img src="{% static 'images/twitter2.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://www.patreon.com/jordanbpeterson" target="_blank"><img src="{% static 'images/patreon.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://www.researchgate.net/profile/Jordan_Peterson2" target="_blank"><img src="{% static 'images/ResearchGate.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://soundcloud.com/jordanpetersonpodcast" target="_blank"><img src="{% static 'images/soundcloud.png' %}" width="30px"/></a>
+                    <a class="hvr-grow" href="https://www.reddit.com/r/JordanPeterson/" target="_blank"><img src="{% static 'images/reddit3.png' %}" width="30px"/></a> | <a href="{% url 'contact' %}">Contact Us </a>
+                </h4>
+            </div>
+        </footer>
+    </div>
 
 </div>
 </body>

@@ -33,50 +33,7 @@ body {
     margin-left: 10rem;
 }
 
-@media only screen and (max-width: 991px) {
-    .navbar-header {
-        margin-left: 35rem;
-    }
-    .navbar-right {
-        margin-top: 1rem;
-        margin-left: 27rem;
-}
-}
 
-@media only screen and (max-width: 870px) {
-    .navbar-header {
-        margin-left: 25rem;
-    }
-    .navbar-right {
-        margin-top: 1rem;
-        margin-left: 19rem;
-}
-}
-
-@media only screen and (max-width: 690px) {
-    .navbar-header {
-        margin-left: 17rem;
-    }
-    .navbar-right {
-        margin-top: 1rem;
-        margin-left: 11rem;
-}
-    
-}
-
-@media only screen and (max-width: 520px) {
-    .navbar-header {
-        margin-left: 10rem;
-    }
-    
-}
-
-@media only screen and (max-width: 480px) {
-    .navbar-header {
-        margin-left: 5rem;
-    }
-    
-}
 
 /*.navbar-collapse {*/
 /*    margin-left: 8rem;*/
@@ -240,6 +197,7 @@ h4 {
 /*}*/
 
 .footer {
+    width:654px;
     margin-top: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -348,4 +306,61 @@ caption p {
     border: 2px solid #FFAA00;
     border-radius: 20px;
     padding-top: 1rem;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 991px) {
+    .navbar-header {
+        margin-left: 35rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 27rem;
+    }
+    .footer {
+        width:50%;
+        margin-top: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #331D15;
+        color: #A9A9A9;
+        text-align: center;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .navbar-header {
+        margin-left: 25rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 19rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    .navbar-header {
+        margin-left: 17rem;
+    }
+    .navbar-right {
+        margin-top: 1rem;
+        margin-left: 11rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .navbar-header {
+        margin-left: 10rem;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar-header {
+        margin-left: 5rem;
+    }
+    
 }
