@@ -17,66 +17,77 @@
 
 <body>
     <!-- Fixed masthead -->
-
-    <!--<div class="container">-->
-    <nav id="navbar" class="navbar navbar-masthead navbar-fixed-top">
-        <div class="row navbar-top-row">
-            <div class="navbar-header col-md-6">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                </button>
-                <!--<img src="../static/images/Maps_of_meaning.png" alt="Maps of Meaning Logo" width="50px">-->
-                <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
-            </div>
-
-
-
-            <div class="navbar-collapse collapse col-md-6">
-                <ul class="nav navbar-nav navbar-right">
-                    <div class="searchbox">
-                        <div class="display">
-                            <form action="{% url 'search' %}" method="get">
-                                <input class="search-input" type="text" name="q">
-                                <button class="btn btn-info hvr-grow" type="submit">Search</button>
-                            </form>
+<div class="container">
+    <div class="container">
+        <nav id="navbar" class="navbar navbar-masthead navbar-fixed-top">
+            <div class="row navbar-top-row">
+                <div class="navbar-header  col-md-6">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <!--<img src="../static/images/Maps_of_meaning.png" alt="Maps of Meaning Logo" width="50px">-->
+                    <a class="navbar-brand" href="{% url 'index' %}">Dr. Jordan Peterson</a>
+                </div>
+    
+    
+    
+                <div class="navbar-collapse collapse col-md-6">
+                    <ul class="nav navbar-nav navbar-right">
+                        <div class="searchbox">
+                            <div class="display">
+                                <form action="{% url 'search' %}" method="get">
+                                    <input class="search-input" type="text" name="q">
+                                    <button class="btn btn-info hvr-grow" type="submit">Search</button>
+                                </form>
+                            </div>
                         </div>
+                        {% if request.user.is_authenticated %}
+                        <li><a href="{% url 'profile' %}">Profile<i class="fa fa-user"></i></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{% url 'logout' %}">Log Out<i class="fa fa-sign-out"></i></a></li>
+                        {% else %}
+                        <li><a href="{% url 'login' %}">Log In<i class="fa fa-user-plus"></i></a></li>
+                        <li><a href="{% url 'register' %}">Register<i class="fa fa-sign-in"></i></a></li>
+                        {% endif %}
+                        <li>
+                            <a href="{% url 'view_cart' %}">
+                                <i class="fa fa-shipping-cart"></i> Cart
+                                {% if product_count > 0 %}
+                                <label class="badge badge-warning">{{ product_count }}</label>
+                                {% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <hr class="navbarline">
+    
+            <!--<div class="container">-->
+                <div class="row navbar-bottom-row">
+                    <div class="col-lg-8 col-lg-offset-4 col-md-10 col-md-offset-2 col-xs-12">
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-buttons"><a href="{% url 'about' %}">About<img src="{% static 'images/head.png' %}" width="30px"/></a></li>
+                            <li class="navbar-buttons"><a href="{% url 'categories' %}">Book Store<img src="{% static 'images/books-stack-of-three.png' %}" width="30px"/></a></li>
+                            <li class="navbar-buttons"><a href="{% url 'youtubecategories' %}">Youtube Series<img src="{% static 'images/youtube.png' %}" width="30px"/></a></li>
+                        </ul>
                     </div>
-                    {% if request.user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}">Profile<i class="fa fa-user"></i></a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="{% url 'logout' %}">Log Out<i class="fa fa-sign-out"></i></a></li>
-                    {% else %}
-                    <li><a href="{% url 'login' %}">Log In<i class="fa fa-user-plus"></i></a></li>
-                    <li><a href="{% url 'register' %}">Register<i class="fa fa-sign-in"></i></a></li>
-                    {% endif %}
-                    <li>
-                        <a href="{% url 'view_cart' %}">
-                            <i class="fa fa-shipping-cart"></i> Cart
-                            {% if product_count > 0 %}
-                            <label class="badge badge-warning">{{ product_count }}</label>
-                            {% endif %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <hr class="navbarline">
-
-
-        <div class="row navbar-bottom-row">
-            <div class="col-md-6 col-md-offset-4">
-                <ul class="nav navbar-nav">
-                    <li class="navbar-buttons"><a href="{% url 'about' %}">About<img src="{% static 'images/head.png' %}" width="30px"/></a></li>
-                    <li class="navbar-buttons"><a href="{% url 'categories' %}">Book Store<img src="{% static 'images/books-stack-of-three.png' %}" width="30px"/></a></li>
-                    <li class="navbar-buttons"><a href="{% url 'youtubecategories' %}">Youtube Series<img src="{% static 'images/youtube.png' %}" width="30px"/></a></li>
-                </ul>
-            </div>
-        </div>
-
-
-    </nav>
-
+                </div>
+                
+                <!--<div class="col-xs-12"></div>-->
+                
+            <!--</div>-->
+            <!--<div class="container">-->
+            <!--    <div class="row">-->
+            <!--            <div class="col-md-2 col-md-offset-3"><a href="{% url 'about' %}">About<img src="{% static 'images/head.png' %}" width="30px"/></a></div>-->
+            <!--            <div class="col-md-2"><a href="{% url 'categories' %}">Book Store<img src="{% static 'images/books-stack-of-three.png' %}" width="30px"/></a></div>-->
+            <!--            <div class="col-md-2"><a href="{% url 'youtubecategories' %}">Youtube Series<img src="{% static 'images/youtube.png' %}" width="30px"/></a></div>-->
+            <!--    </div>-->
+            <!--</div>-->
+    
+    
+        </nav>
+    </div>
 
     <div class="pushdown">
         {% if messages %}
@@ -108,7 +119,7 @@
         </div>
     </footer>
 
-    <!--</div>-->
+</div>
 </body>
 
 </html>
