@@ -57,7 +57,7 @@ body {
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 .about-card {
-    margin-top: 1rem;
+    /*margin-top: 1rem;*/
     margin-left: 7rem;
     border: 5px solid #FFAA00;
     border-radius: 60px;
