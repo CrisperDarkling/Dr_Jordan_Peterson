@@ -94,9 +94,10 @@ body {
 
 /*////////////////////////////////////////////////////////////////////////////////*/
 .category-cards {
-    /*margin-left: 26rem;*/
-    margin-top: 7rem;
-    margin-bottom: 15rem;
+    margin-left: 12rem;
+    margin-right: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .category-bg {
@@ -108,8 +109,8 @@ body {
     background: no-repeat center;
     background-size: cover;
     border: 2px solid #FFAA00;
-    height: 30rem;
-    width:25rem;
+    height: 24rem;
+    width: 20rem;
 }
 
 /*.cats h4 {*/
@@ -238,9 +239,7 @@ h4 {
 .badge-warning[href] {
     background-color: #c67605;
 }
-/*.products-row {*/
-/*    margin-left: 40rem;*/
-/*}*/
+
 
 .product-image {
     background-size: contain;
@@ -273,12 +272,13 @@ caption p {
 
 .panel-default {
     padding: 0 1rem;
-    margin-left: 5rem;
+    margin-left: 8rem;
     border: 2px solid #FFAA00;
 }
 
 .panel-body {
     height: 70%;
+    
 }
 
 /*////////////////////////////////////////////////////////////////////////////////*/
@@ -325,6 +325,15 @@ caption p {
     .about-card {
         margin-top: 14rem;
     }
+    .product-row {
+        margin-top: 16rem;
+    }
+    .panel-default {
+        padding: 0 1rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        border: 2px solid #FFAA00;
+    }
 }
 
 @media only screen and (max-width: 1199px) {
@@ -333,7 +342,10 @@ caption p {
     }
     .sign-btn {
     margin-left:17rem;
-}
+    }
+    .product-row {
+        margin-top: 0rem;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -361,6 +373,22 @@ caption p {
     .sign-btn {
     margin-left:30rem;
     }
+    .category-cards {
+        margin-left: 5rem;
+        margin-right: 12rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .cats {
+        background: no-repeat center;
+        background-size: cover;
+        border: 2px solid #FFAA00;
+        height: 18rem;
+        width: 15rem;
+    }
+    .product-row {
+        margin-top: 16rem;
+    }
 }
 
 @media only screen and (max-width: 870px) {
@@ -381,6 +409,12 @@ caption p {
         margin-top: 13rem;
         margin-right: 10rem;
     }
+    .category-row {
+        margin-top: 16rem;
+    }
+    .product-row {
+        margin-top: 20rem;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -389,6 +423,41 @@ caption p {
     }
     .sign-btn {
     margin-left:25rem;
+    }
+    .category-cards {
+        margin-left: 2rem;
+        margin-right: 10rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .cats {
+        background: no-repeat center;
+        background-size: cover;
+        border: 2px solid #FFAA00;
+        height: 13.5rem;
+        width: 11.25rem;
+    }
+    .panel-default {
+        height: 25rem;
+        width: 20rem;
+        padding: 0 1rem;
+        margin-left: 8rem;
+        margin-right: 3rem;
+        border: 2px solid #FFAA00;
+    }
+    .product-image {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 10rem;
+        height: 10rem;
+    }
+    .btn {
+        height: 2.2rem;
+        width: 10rem;
+    }
+    .panel-body {
+        padding: 1rem;
     }
 }
 
@@ -406,12 +475,32 @@ caption p {
     .sign-btn {
     margin-left:20rem;
     }
+    .panel-default {
+        height: 25rem;
+        width: 20rem;
+        padding: 0 1rem;
+        margin-left: 4rem;
+        margin-right: 2rem;
+        border: 2px solid #FFAA00;
+    }
 }
 
 @media only screen and (max-width: 570px) {
     .sign-btn {
     margin-left:14rem;
     }
+}
+
+@media only screen and (max-width: 536px) {
+    .panel-default {
+        height: 25rem;
+        width: 20rem;
+        padding: 0 1rem;
+        margin-left: 2rem;
+        margin-right: 1rem;
+        border: 2px solid #FFAA00;
+    }
+    
 }
 
 @media only screen and (max-width: 520px) {
@@ -424,6 +513,26 @@ caption p {
 @media only screen and (max-width: 480px) {
     .navbar-header {
         margin-left: 5rem;
+    }
+    .panel-default {
+        height: 25rem;
+        width: 20rem;
+        padding: 0 1rem;
+        margin-left: 1rem;
+        margin-right: .5rem;
+        border: 2px solid #FFAA00;
+    }
+    
+}
+
+@media only screen and (max-width: 446px) {
+    .panel-default {
+        height: 25rem;
+        width: 20rem;
+        padding: 0 1rem;
+        margin-left: 9rem;
+        margin-right: 2rem;
+        border: 2px solid #FFAA00;
     }
     
 }

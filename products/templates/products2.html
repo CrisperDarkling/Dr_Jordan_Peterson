@@ -1,34 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="row row-flex">
-   {% for product in products %} 
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-2  display panel panel-default">
-        <div class="panel-body">
-            <div class="row">
-                <img class="product-image img-responsive center-block col-md-12" src="{{ MEDIA_URL }}{{ product.image }}"/>
-            </div>
-            <div class="row">
-                <p class="products col-md-12"><strong>{{ product.name }}</strong></p>
-                <p class="products col-md-12"><u>{{ product.book_author }}</u></p>
-            </div>
-                <p class="products"><strong><u>€{{ product.price }} </u></strong></p>
-                
-                <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <!--<button class="btn btn-success" type="submit">Add</button>-->
-                            <p><a class="btn btn-sm btn-info pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}" 
-                            title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></p>
-                        </span>
-                    </div>
+<!--<div class="container-fluid">-->
+    <div class="row row-flex product-row">
+       {% for product in products %} 
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 display panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <img class="product-image img-responsive center-block col-md-12" src="{{ MEDIA_URL }}{{ product.image }}"/>
+                </div>
+                <div class="row">
+                    <p class="products col-md-12"><strong>{{ product.name }}</strong></p>
+                    <p class="products col-md-12"><u>{{ product.book_author }}</u></p>
+                </div>
+                    <p class="products"><strong><u>€{{ product.price }} </u></strong></p>
                     
-                </form>
+                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <!--<button class="btn btn-success" type="submit">Add</button>-->
+                                <p><a class="btn btn-sm btn-info pop-up-button" data-toggle="modal" data-target="#myModal{{ product.id }}" 
+                                title="Add to cart" href="#"> Add To Cart <span class="glyphicon glyphicon-shopping-cart"></span></a></p>
+                            </span>
+                        </div>
+                        
+                    </form>
+            </div>
         </div>
+    {% endfor %}
     </div>
-{% endfor %}
-</div>
+<!--</div>-->
 
 
 {% for product in products %}

@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="row row-flex category-row"> 
 {% for category in categories %}
-    <div >  
-        <div class="category-cards col-md-3 col-md-offset-1">
+     
+        <div class="category-cards col-lg-2 col-md-1 col-sm-1 col-xs-1">
             <a href="{% url 'products_by_category' category.id %}">
                 <figure>
-                    <div class="col-md-4 cats" style="background-image: url({{ MEDIA_URL }}{{ category.image }});"></div>
+                    <div class=" cats" style="background-image: url({{ MEDIA_URL }}{{ category.image }});"></div>
                     <figcaption class="category-bg">{{ category.name }}</figcaption>
                 </figure>
             </a>
         </div>
-    </div> 
+     
 {% endfor %}
-
+    </div>
 {% endblock %}
