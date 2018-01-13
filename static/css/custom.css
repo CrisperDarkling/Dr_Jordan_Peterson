@@ -431,6 +431,9 @@ caption p {
         margin-top: 6rem;
         margin-right: 6rem;
     }
+    .cart-table {
+        margin-top: 6rem;
+    }
 }
 
 @media only screen and (max-width: 870px) {
@@ -465,7 +468,10 @@ caption p {
         /*background: rgb(0, 0, 0);*/
         /*background: rgba(0, 0, 0, 0.5);*/
         margin-top: 21rem;
-}
+    }
+    .cart-table {
+        margin-top: 12rem;
+    }
 }
 
 @media only screen and (max-width: 789px) {
