@@ -342,6 +342,9 @@ caption p {
     .about-card {
         margin-top: 7rem;
     }
+    .cart-table {
+        margin-top: 7rem;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -356,6 +359,9 @@ caption p {
         margin-left: 3rem;
         margin-right: 3rem;
         border: 2px solid #FFAA00;
+    }
+    .cart-table {
+        margin-top: 0rem;
     }
 }
 
