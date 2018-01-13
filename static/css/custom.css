@@ -113,6 +113,13 @@ body {
     width: 20rem;
 }
 
+.YTcats {
+    background: no-repeat center;
+    background-size: cover;
+    border: 2px solid #FFAA00;
+    height: 24rem;
+    width: 20rem;
+}
 /*.cats h4 {*/
 /*    background-color: black;*/
 /*}*/
@@ -132,11 +139,14 @@ figcaption {
 /*////////////////////////////////////////////////////////////////////////////////*/
 
 .YT-set {
-    margin-left: 26rem;
     margin-top: 3rem;
 }
 
 .YT-cards {
+    margin-bottom: 15rem;
+}
+
+.YT-desc {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
 }
@@ -389,6 +399,25 @@ caption p {
     .product-row {
         margin-top: 16rem;
     }
+    /*.modal-content {*/
+    /*    border: 2px solid #FFAA00;*/
+    /*    width: 596px;*/
+    /*    height: 820px;*/
+    /*}*/
+    /*.modal-header {*/
+    /*    width: 566px;*/
+    /*    padding: 15px;*/
+    /*    height: 820px;*/
+    /*}*/
+    /*.modal-body {*/
+    /*    width: 556px;*/
+    /*    padding:20px;*/
+    /*    height: 636px;*/
+    /*}*/
+    .YT-cards {
+        margin-top: 6rem;
+        margin-right: 6rem;
+    }
 }
 
 @media only screen and (max-width: 870px) {
@@ -414,6 +443,17 @@ caption p {
     }
     .product-row {
         margin-top: 20rem;
+    }
+    .YT-cards {
+        margin-top: 6rem;
+        margin-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 789px) {
+    .YT-cards {
+        margin-top: 9rem;
+        margin-right: 3rem;
     }
 }
 
@@ -459,6 +499,11 @@ caption p {
     .panel-body {
         padding: 1rem;
     }
+    .YT-cards {
+        margin-left: 22rem;
+        margin-right: 6rem;
+        margin-bottom: 0rem;
+    }
 }
 
 @media only screen and (max-width: 690px) {
@@ -483,6 +528,10 @@ caption p {
         margin-right: 2rem;
         border: 2px solid #FFAA00;
     }
+    .YT-cards {
+        margin-left: 18rem;
+        margin-right: 5rem;
+    }
 }
 
 @media only screen and (max-width: 570px) {
@@ -499,6 +548,10 @@ caption p {
         margin-left: 2rem;
         margin-right: 1rem;
         border: 2px solid #FFAA00;
+    }
+    .YT-cards {
+        margin-left: 12rem;
+        margin-right: 5rem;
     }
     
 }
@@ -534,5 +587,17 @@ caption p {
         margin-right: 2rem;
         border: 2px solid #FFAA00;
     }
+    .YT-cards {
+        margin-left: 7rem;
+        margin-right: 5rem;
+    }
     
+}
+
+@media only screen and (max-width: 407px) {
+    .YT-cards {
+        margin-left: 7rem;
+        margin-right: 5rem;
+        margin-top: 7rem;
+    }
 }
