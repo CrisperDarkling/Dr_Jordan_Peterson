@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-USE_S3 = os.environ.get("USE_S3", False)
+USE_S3 = os.environ.get("USE_S3", True)
 
 ALLOWED_HOSTS = ["dr-jordan-b-peterson-crisperdarkling.c9users.io", "dr-jordan-peterson-bookstore.herokuapp.com"]
 
@@ -186,6 +186,7 @@ STATICFILES_DIRS = (
 
 
 if USE_S3:
+    print("using s3")
     AWS_S3_OBJECT_PARAMETERS = {  
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
@@ -202,10 +203,6 @@ if USE_S3:
 
     STATICFILES_LOCATION = 'static'
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    
-    
-    
-    
     
     
 
