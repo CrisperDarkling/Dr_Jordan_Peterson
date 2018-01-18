@@ -7,5 +7,5 @@ def all_products(request):
     return render(request, "products2.html", {"products": products})
     
 def products_by_category(request, id):
-    products = Products.objects.filter(category=id)
+    products = Products.objects.filter(category=id).order_by('book_author')
     return render(request, "products2.html", {"products": products})

@@ -5,7 +5,7 @@
 
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
-            <legend>Login</legend>
+            <legend class="login">Login</legend>
             
             {% if next %}
                 <p>No account? <a href="{% url 'register' %}?next={{ next }}">Sign up</a> now.</p>

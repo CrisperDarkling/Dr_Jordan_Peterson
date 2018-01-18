@@ -79,6 +79,12 @@ body {
     
 }
 
+.intro {
+    margin-top: 3rem;
+    padding:1rem;
+    border: 1px solid #FFAA00;
+    /*border-radius: 45px;*/
+}
 
 body {
     font-family: Arial;
@@ -209,6 +215,10 @@ h4 {
     color: white;
 }
 
+.login {
+    color: white;
+    /*text-align: center;*/
+}
 
 .searchbox {
     display:inline-block;

@@ -37,7 +37,7 @@ from purchased import urls as purchased_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', get_index, name="index"),
+    url(r'^$', get_about, name="about"),
     url(r'^about$', get_about, name="about"),
     url(r'^accounts/', include(accounts_urls)),
     url(r'^blog/', include(blog_urls)),
