@@ -41,7 +41,7 @@ def contact(request):
             )
             email.send()
             messages.success(request, 'We have recieved your email & will get back to you as soon as possible!')
-            return redirect('index')
+            return redirect('about')
 
     return render(request, 'contact.html', {
         'form': form_class,

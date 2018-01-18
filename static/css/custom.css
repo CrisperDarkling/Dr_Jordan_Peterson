@@ -452,6 +452,14 @@ caption p {
     }
 }
 
+
+@media only screen and (max-width: 892px) {
+    .login {
+        margin-top: 10rem;
+    }
+}
+
+
 @media only screen and (max-width: 870px) {
     .about-card {
         margin-left: 2rem;

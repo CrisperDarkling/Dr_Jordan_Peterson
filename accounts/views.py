@@ -12,10 +12,10 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def logout(request):
-    """A view that logs the user out and redirects back to the index page"""
+    """A view that logs the user out and redirects back to the about page"""
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse('about'))
 
 
 def login(request):
@@ -69,7 +69,7 @@ def register(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('index'))
+                    return redirect(reverse('about'))
             else:
                 messages.error(request, "unable to log you in at this time!")
     else:
