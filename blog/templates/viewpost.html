@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-3 col-md-offset-5 col-sm-3 col-sm-offset-4 col-xs-4 col-xs-offset-4">
-                <button class="btn btn-default" onclick="location.href='{% url 'youtubecategories' %}'">Back To Blog</button>
+                <button class="btn btn-default" onclick="history.go(-1);">Back To Blog</button>
                 <p>Published on {{ post.published_date }}</p>
             </div>
         </div>
