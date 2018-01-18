@@ -164,7 +164,7 @@ figcaption {
 .blogposts-card {
     background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.5);
-    margin-top: 15rem;
+    margin-top: 7rem;
     /*border-bottom: 2px solid #FFAA00;*/
 }
 
@@ -292,7 +292,15 @@ h4 {
     color: black;
 }
 
-
+/*.prod-title  {*/
+/*    margin-bottom:6rem;*/
+/*    margin-right: 2rem;*/
+/*    font-size: 7rem;*/
+/*}*/
+.back-btn {
+    margin-bottom: 2rem;
+    margin-left: 6.4rem;
+}
 
 caption p {
     word-wrap: break-word;
@@ -425,8 +433,8 @@ caption p {
         height: 18rem;
         width: 15rem;
     }
-    .product-row {
-        margin-top: 16rem;
+    .back-btn {
+        margin-top: 7rem;
     }
     /*.modal-content {*/
     /*    border: 2px solid #FFAA00;*/
@@ -481,8 +489,8 @@ caption p {
     .category-row {
         margin-top: 16rem;
     }
-    .product-row {
-        margin-top: 20rem;
+    .back-btn {
+        margin-top: 12rem;
     }
     .YT-cards {
         margin-top: 6rem;
@@ -491,7 +499,7 @@ caption p {
     .blogposts-card {
         /*background: rgb(0, 0, 0);*/
         /*background: rgba(0, 0, 0, 0.5);*/
-        margin-top: 21rem;
+        margin-top: 6rem;
     }
     .cart-table {
         margin-top: 12rem;
@@ -565,6 +573,9 @@ caption p {
     .navbar-right {
         margin-top: 1rem;
         margin-left: 11rem;
+    }
+    .back-btn {
+        margin-bottom: 8rem;
     }
 }
 
