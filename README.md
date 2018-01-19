@@ -1,6 +1,6 @@
 # Dr. Jordan Peterson Bookstore
 
-This is a Django E-Commerce site built as the final project of The Code Institute's classroom bootcamp. It's a fictional bookstore and video blog inspired by a real psychologist; Dr. Jordan Peterson.
+This is a Django E-Commerce site built as the Stream 3 project of The Code Institute's classroom bootcamp. It's a fictional bookstore and video blog inspired by a real psychologist; Dr. Jordan Peterson.
 
 
 ## Live Demo
@@ -156,7 +156,7 @@ SQLite database
 
 ## Versioning
 
-The code was written on Cloud9 and version-controlled using github.
+The code was written on Cloud9 and version-controlled using github https://github.com/CrisperDarkling/Dr_Jordan_Peterson
 
 
 ## Project Management
