@@ -47,12 +47,19 @@ This is where the User can view and adjust the books they have selected from the
 ### Categories
 
 This app displays the seven different book categories covered by this bookstore. These are:
+
 1 - Clinical Psychology & Personality
+
 2 - General
+
 3 - History
+
 4 - Jordan B Peterson
+
 5 - Literature/Philosophy
+
 6 - Neuroscience
+
 7 - Religion & Religious History
 
 
@@ -75,7 +82,7 @@ This app displays the books from the Category the User selected in categories.ht
 
 purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
 
-**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![Rend](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment with the pop-up message.**
+**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![Rend](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links by routing via URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment with the pop-up message.**
 
 
 ### Search
@@ -86,6 +93,7 @@ This app allows Users to search the website, although I have realised too late t
 ## Prerequisites
 
 Here is a list of software required to build this website:
+
 Django==1.11.7
 
 Pillow==4.3.0
@@ -159,6 +167,7 @@ I used the Asana website and app to manage my project tasks from beginning to en
 My complete tasks:
 
 ![AsanaComp](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/Asana_JPB_com.png "Asana Complete Tasks")
+
 
 My incomplete tasks:
 
