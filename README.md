@@ -3,9 +3,7 @@
 This is a Django E-Commerce site built as the final project of The Code Institute's classroom bootcamp. It's a fictional bookstore and video blog inspired by a real psychologist; Dr. Jordan Peterson.
 
 ## Live Demo
-https://dr-jordan-peterson-bookstore.herokuapp.com/
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Here is the link for the Heroku-deployed website https://dr-jordan-peterson-bookstore.herokuapp.com/
 
 ## Apps
 
@@ -49,10 +47,10 @@ This app displays the books from the Category the User selected in categories.ht
 ### Purchased
 purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
 
-**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
+**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment with the pop-up message.**
 
 ### Search
-This app allows Users to search the website, although I have realised too late that this function does not work fully
+This app allows Users to search the website, although I have realised too late that this function is incomplete.
 
 ## Prerequisites
 
@@ -76,51 +74,12 @@ s3transfer==0.1.12
 stripe==1.75.1
 
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 This project was deployed via Heroku, and pretested using Travis CI.
+
+## Static File Storage
+An amazon AWS S3 Bucket was used to host all of the static files.
 
 ## Built With
 
@@ -146,3 +105,48 @@ The code was written on Cloud9 and version-controlled using github.
 * Hat tip to anyone who's code was used
 * Inspiration
 * etc
+
+
+
+
+```
+Give examples
+```
+
+<!--### Installing-->
+
+<!--A step by step series of examples that tell you have to get a development env running-->
+
+<!--Say what the step will be-->
+
+<!--```-->
+<!--Give the example-->
+<!--```-->
+
+<!--And repeat-->
+
+<!--```-->
+<!--until finished-->
+<!--```-->
+
+<!--End with an example of getting some data out of the system or using it for a little demo-->
+
+<!--## Running the tests-->
+
+<!--Explain how to run the automated tests for this system-->
+
+<!--### Break down into end to end tests-->
+
+<!--Explain what these tests test and why-->
+
+<!--```-->
+<!--Give an example-->
+<!--```-->
+
+<!--### And coding style tests-->
+
+<!--Explain what these tests test and why-->
+
+<!--```-->
+<!--Give an example-->
+<!--```-->
