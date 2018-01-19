@@ -48,14 +48,32 @@ This app displays the books from the Category the User selected in categories.ht
 ### Purchased
 purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
 
-**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books ![Purchased Full Render](static/images/PurchasedFullRend.png) . My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
+**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Description goes here") . My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
 
 ### Search
-
+This app allows Users to search the website, although I have realised too late that this function does not work fully
 
 ## Prerequisites
 
-What things you need to install the software and how to install them
+Here is a list of software one needed to build this website:
+Django==1.11.7
+Pillow==4.3.0
+boto==2.48.0
+boto3==1.4.8
+botocore==1.8.13
+dj-database-url==0.4.2
+django-forms-bootstrap==3.1.0
+django-storages==1.6.5
+docutils==0.14
+gunicorn==19.7.1
+jmespath==0.9.3
+olefile==0.44
+psycopg2==2.7.3.2
+python-dateutil==2.6.1
+pytz==2017.3
+s3transfer==0.1.12
+stripe==1.75.1
+
 
 ```
 Give examples
