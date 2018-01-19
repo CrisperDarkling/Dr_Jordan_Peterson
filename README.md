@@ -2,7 +2,8 @@
 
 This is a Django E-Commerce site built as the final project of The Code Institute's classroom bootcamp. It's a fictional bookstore and video blog inspired by a real psychologist; Dr. Jordan Peterson.
 
-## Getting Started
+## Live Demo
+https://dr-jordan-peterson-bookstore.herokuapp.com/
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -48,7 +49,7 @@ This app displays the books from the Category the User selected in categories.ht
 ### Purchased
 purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
 
-**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Description goes here") . My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
+**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
 
 ### Search
 This app allows Users to search the website, although I have realised too late that this function does not work fully
