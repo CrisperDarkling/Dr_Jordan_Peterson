@@ -47,7 +47,7 @@ This app displays the books from the Category the User selected in categories.ht
 ### Purchased
 purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
 
-**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![alt tag](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment with the pop-up message.**
+**My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books like this: ![Rend](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/PurchasedFullRend.png "Full library download rendering")My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment with the pop-up message.**
 
 ### Search
 This app allows Users to search the website, although I have realised too late that this function is incomplete.
@@ -97,14 +97,21 @@ SQLite database
 The code was written on Cloud9 and version-controlled using github.
 
 
+## Project Management
+I used the Asana website and app to manage my project tasks from beginning to end. I had multiple column headings under which I could easily create, alter and move tasks around.
 
 
+My complete tasks:
+![AsanaComp](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/Asana_JPB_com.png "Asana Complete Tasks")
+
+My incomplete tasks:
+![AsanaIncomp](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/Asana_JPB_incom.png "Asana Incomplete Tasks")
 
 ## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+I must acknowledge:
+- Richard Dalton & Matt Rudge (Lecturers) and Katie Maxwell & Neil McEwen (Teaching Assitants) for all their teaching, support and coding wisdom throughout this coding course.
+- My class mates for their high-spirits, help and hard work.
+- Dr. Jordan Peterson for being an awesome inspiration.
 
 
 
