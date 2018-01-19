@@ -174,6 +174,16 @@ My incomplete tasks:
 ![AsanaIncomp](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/Asana_JPB_incom.png "Asana Incomplete Tasks")
 
 
+
+## Testing
+
+Unit testing was forgotten about until the last minute, when deployment and connection to a Postgres database don't agree with tests.
+
+![TestingFail](https://s3-eu-west-1.amazonaws.com/jordan-peterson-bookstore/static/images/Testing-Fail.png "FailedTesting")
+
+
+
+
 ## Acknowledgments
 
 I must acknowledge:
