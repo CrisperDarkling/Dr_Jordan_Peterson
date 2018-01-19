@@ -6,7 +6,53 @@ This is a Django E-Commerce site built as the final project of The Code Institut
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+## Apps
+
+### Home
+The index.html page which serves as the first page loaded, extending from base.html. I decided to remove the index.html page and just use the about.html as the first page because I found it added nothing to my website.
+
+### About
+The about.html page, as mentioned above, is the actual landing page for this website. It also explains who Dr. Jordan Peterson is as well as what the website entails.
+
+### Accounts
+This app allows visitors to register an account, log in, view their profile (which confirms what User they are logged-in as) and log out. This allows the User to then purchase books through the bookshop and cart.
+
+### Blogcategories
+The Blogcategories app displays three of Dr. Peterson's 2017 YouTube lecture series; Maps of Meaning, Personality and its Transformations, The Psychological Significance of the Bible. The first two are psychology lectures he teaches at the University of Toronto, which he records every year to share online. The Biblical lectures were a public series started by demand because of his increasing popularity as a public speaker and lecturer.
+
+### Blog
+Once a Blogcategory is selected, the Blog app displays the lectures as a set of blogposts, each with a thumbnail, description, publish date and "Read More" button. Clicking "Read More" brings the User to a viewpost.html which displays the embedded YouTube video which can be watched on-site. There is also a "Go Back" to bring the User back one page.
+
+### Cart
+This is where the User can view and adjust the books they have selected from the products page just before clicking "Checkout" to make a purchase.
+
+### Categories
+This app displays the seven different book categories covered by this bookstore. These are:
+1 - Clinical Psychology & Personality
+2 - General
+3 - History
+4 - Jordan B Peterson
+5 - Literature/Philosophy
+6 - Neuroscience
+7 - Religion & Religious History
+
+### Checkout
+This is where Users purchase the books they've added to their Cart. Users can adjust the quantity of each book they have selected. Here they fill out their personal and payment details to buy the books via Stripe.
+
+### Contact
+This app allows Users to fill in a form and contact the site developer. They are redirected to the landing about.html page and notified by pop-up message: "We have recieved your email & will get back to you as soon as possible!".
+
+### Products
+This app displays the books from the Category the User selected in categories.html. Each book is displayed on its own panel-card which has the Book Image, Name, Author, Price and "View Product" button. Pressing this button opens up a modal which has the same information as the panel-card, but also includes the book description and an "Add to Cart" button attached to a "Quantity" selector. "Add to Cart" will add the choosen amount of books to the User's Cart and then redirect them to the Categories page. products.html also has a "Go Back" button which will take the User back one page.
+
+### Purchased
+purchased.html is rendered once the User has successfully completed a purchase through checkout.html. A pop-up message is displayed saying "You have successfully paid".
+** My original intention for this page was to provide Users with a download link containing the .pdf file for each book they had purchased,  as I have most of these books in this form. Hardcoding the download link wasn't viable, and calling the product download link with: "href="static/downloads/{{ product.download_link }}"" ended up rendering the entire library of books ![Purchased Full Render](./README-images/PurchasedFullRend.png). My lecturer said there was a simple way to provide the specific book links using URLs, but time thinned out and he got busy, and I wasn't able to figure it out, so purchased.html only confirms payment.**
+
+### Search
+
+
+## Prerequisites
 
 What things you need to install the software and how to install them
 
@@ -65,23 +111,15 @@ Bootstrap
 Python
 SQLite database
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+The code was written on Cloud9 and version-controlled using github.
 
-## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
