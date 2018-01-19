@@ -16,6 +16,10 @@ The about.html page, as mentioned above, is the actual landing page for this web
 ### Accounts
 This app allows visitors to register an account, log in, view their profile (which confirms what User they are logged-in as) and log out. This allows the User to then purchase books through the bookshop and cart.
 
+### base.html
+This formed the base-layer of the website. It contains the Navbar, background picture and Footer. The Top-Navbar contains links to Register & Log-in // Profile & Log-out, Cart, the Search box, and the Bottom-Navbar contains links to About, Book Store and YouTube Series.
+The Footer contains links to Jordan Peterson's sites and social media accounts: JordanPeterson.com, Facebook, YouTube, Twitter, Patreon, Research Gate, Soundcloud and Reddit. It also contains the "Contact Us" link. 
+
 ### Blogcategories
 The Blogcategories app displays three of Dr. Peterson's 2017 YouTube lecture series; Maps of Meaning, Personality and its Transformations, The Psychological Significance of the Bible. The first two are psychology lectures he teaches at the University of Toronto, which he records every year to share online. The Biblical lectures were a public series started by demand because of his increasing popularity as a public speaker and lecturer.
 
@@ -54,7 +58,7 @@ This app allows Users to search the website, although I have realised too late t
 
 ## Prerequisites
 
-Here is a list of software one needed to build this website:
+Here is a list of software required to build this website:
 Django==1.11.7
 Pillow==4.3.0
 boto==2.48.0
@@ -116,9 +120,9 @@ I must acknowledge:
 
 
 
-```
-Give examples
-```
+<!--```-->
+<!--Give examples-->
+<!--```-->
 
 <!--### Installing-->
 
