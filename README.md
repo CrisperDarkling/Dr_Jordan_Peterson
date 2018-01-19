@@ -1,6 +1,6 @@
-# Project Title
+# Dr. Jordan Peterson Bookstore
 
-One Paragraph of project description goes here
+This is a Django E-Commerce site built as the final project of The Code Institute's classroom bootcamp. It's a fictional bookstore and video blog inspired by a real psychologist; Dr. Jordan Peterson.
 
 ## Getting Started
 
@@ -54,13 +54,16 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+This project was deployed via Heroku, and pretested using Travis CI.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+Django
+HTML
+CSS
+Bootstrap
+Python
+SQLite database
 
 ## Contributing
 
